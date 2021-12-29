@@ -1,0 +1,268 @@
+/* 
+  --------------------
+      Fonts
+  --------------------
+  */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* 
+              --------------------
+                Veriable
+              --------------------
+          */
+
+:root {
+  /* Primery Color */
+  --primery-clr: #01a1a1;
+
+  /* Font */
+  --ff: "Poppins", sans-serif;
+  --f-clr: #002f2f;
+
+  /* Background Color */
+  --bg-clr: #ffffff;
+  --bg2-clr: #fafaff;
+  --bg3-clr: #cbecf0;
+  --bg4-clr: #d2faff;
+
+  --danger-clr: #f84a4a;
+  
+  --grey-shade-1: #2e4747;
+  --black-clr: #222;
+  --max-width: 1170px;
+  --fixed-width-sqr: 800px;
+  --fixed-width: 620px;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --spacing-m: 0.5rem;
+  --spacing-l: 1rem;
+  --radius: 1rem;
+  --radius-2: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 
+              --------------------
+                Global Style  
+              --------------------
+          
+          */
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* border: 0.5px solid #80808080; */
+}
+
+::selection {
+  background-color: var(--primery-clr);
+}
+
+body {
+  overflow: auto;
+  padding: 0 0 5rem;
+  font-family: var(--ff);
+  background: var(--bg2-clr);
+  /* height: 100vh; */
+  /* overflow: hidden; */
+}
+
+body::-webkit-scrollbar {
+  height: 5px;
+  width: 0.7rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--bg4-clr);
+  margin: auto 15px;
+  border-radius: 2px;
+  padding: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  /* background-color: transparent; */
+  background-color: var(--primery-clr);
+  border-radius: 4px;
+  box-sizing: unset;
+  border: 2px solid var(--bg2-clr);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 10vh;
+  text-align: center;
+  display: flex;
+  background: linear-gradient(
+    0deg,
+    var(--bg2-clr) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+footer a {
+  margin: auto auto 0 auto;
+  align-self: baseline;
+  padding: 10px 10px 0 10px;
+  font-size: 0.75rem;
+}
+
+a {
+  text-decoration: underline;
+  color: var(--primery-clr);
+  font-weight: 800;
+}
+
+strong {
+  text-transform: uppercase;
+  color: var(--primery-clr);
+}
+
+.update {
+  padding: 1rem;
+  text-align: center;
+}
+
+/* 
+        --------------------
+          Main Style  
+        --------------------
+  */
+
+.preloader {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--bg-clr);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.preloader img {
+  max-width: var(--fixed-width);
+  width: 205vw;
+}
+
+body {
+  color: #222;
+  background-color: var(--bg2-clr);
+}
+
+section.main {
+  padding: 5vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.main .frame {
+  box-shadow: var(--light-shadow);
+  background-color: var(--bg-clr);
+  padding: var(--spacing-l);
+  max-width: var(--fixed-width);
+  width: 100vw;
+}
+
+.main .frame .status-bar {
+  border-radius: 15px;
+  height: 30px;
+  line-height: 1;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 10px;
+  font-size: 1rem;
+  background-color: var(--primery-clr);
+}
+
+.frame .heading {
+  margin: 20px 0 10px;
+  width: 100%;
+}
+
+.frame form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 20px 0px;
+  height: 3rem;
+}
+.frame form input {
+  padding: 10px;
+  width: 90%;
+  height: 100%;
+  font-size: 1.1rem;
+  border: 1px solid var(--primery-clr);
+  border-radius: var(--radius-2) 0 0 var(--radius-2);
+}
+.frame form button {
+  width: 4rem;
+  padding: 10px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  background-color: var(--primery-clr);
+  border: 0px solid var(--primery-clr);
+  color: var(--bg-clr);
+  cursor: pointer;
+  border-radius: 0 var(--radius-2) var(--radius-2) 0;
+}
+.frame .lists {
+  padding-top: 20px;
+  border-top: 1px solid var(--primery-clr);
+  max-height: 80vh;
+}
+
+.frame .lists li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  height: 2.5rem;
+  align-items: center;
+}
+
+.frame .lists li:nth-child(even) {
+  background-color: var(--bg2-clr);
+}
+.frame .lists li .id-num{
+  width: 10%;
+}
+
+.frame .lists li span {
+  width: 100%;
+  padding-left: 1rem;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.frame .lists li button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+  section.main {
+    margin-top: 10vh;
+  }
+  section.main .btn {
+    transform: translateY(-50%);
+  }
+}
